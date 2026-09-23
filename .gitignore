@@ -1,0 +1,15 @@
+# Project-local Quantum ESPRESSO installation and build artifacts
+.qe/
+.qe-env/
+.qe-src/
+.qe-build/
+.qe-build-autoconf/
+
+# Runtime scratch data and generated calculation output
+qe-out/
+qe-results/
+h2-test/qe-out/
+h2-test/H2.scf.out
+
+# One-off diagnostic file created by QE when invoked without an input file
+input_tmp.in

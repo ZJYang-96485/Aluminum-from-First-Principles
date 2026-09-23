@@ -1,0 +1,55 @@
+&CONTROL
+  calculation='bands'
+  verbosity = 'high'
+  prefix='aluminum',
+  pseudo_dir = './',
+  outdir = './qe-out/'
+/
+&SYSTEM
+  ibrav= 2, 
+  celldm(1)= 9.0, 
+  nat=  1, 
+  ntyp= 1,
+  ecutwfc = 15.0,
+  occupations = 'smearing',
+  smearing = 'methfessel-paxton',
+  degauss = 0.05,
+  nbnd=8
+/
+&ELECTRONS
+  diagonalization='david'
+  mixing_mode = 'plain'
+  conv_thr =  1.0d-8
+/
+ATOMIC_SPECIES
+ Al  26.982  Al.pbe-n-van.UPF
+ATOMIC_POSITIONS alat
+ Al 0.00 0.00 0.00
+K_POINTS
+ 26
+   0.0 0.0 0.0 1.0
+   0.0 0.0 0.1 1.0
+   0.0 0.0 0.2 1.0
+   0.0 0.0 0.3 1.0
+   0.0 0.0 0.4 1.0
+   0.0 0.0 0.5 1.0
+   0.0 0.0 0.6 1.0
+   0.0 0.0 0.7 1.0
+   0.0 0.0 0.8 1.0
+   0.0 0.0 0.9 1.0
+   0.0 0.0 1.0 1.0
+   0.0 0.9 0.9 1.0
+   0.0 0.8 0.8 1.0
+   0.0 0.7 0.7 1.0
+   0.0 0.6 0.6 1.0
+   0.0 0.5 0.5 1.0
+   0.0 0.4 0.4 1.0
+   0.0 0.3 0.3 1.0
+   0.0 0.2 0.2 1.0
+   0.0 0.1 0.1 1.0
+   0.0 0.0 0.0 1.0
+   0.1 0.1 0.1 1.0
+   0.2 0.2 0.2 1.0
+   0.3 0.3 0.3 1.0
+   0.4 0.4 0.4 1.0
+   0.5 0.5 0.5 1.0
