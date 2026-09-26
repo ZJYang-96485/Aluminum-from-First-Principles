@@ -1,0 +1,32 @@
+&CONTROL
+  calculation = 'scf',
+  restart_mode = 'from_scratch',
+  prefix = 'lda_smearing_ecut-040p0-ry_k-20x20x20_degauss-0p020-ry',
+  tstress = .true.,
+  tprnfor = .true.,
+  pseudo_dir = '/Users/zhy/Aluminum-from-First-Principles/',
+  outdir = '/Users/zhy/Aluminum-from-First-Principles/lda-convergence-runs/smearing/ecut-040.0-ry_k-20x20x20_degauss-0.020-ry/qe-out/'
+/
+&SYSTEM
+  ibrav = 2,
+  celldm(1) = 7.6000000000,
+  nat = 1,
+  ntyp = 1,
+  input_dft = 'PZ',
+  ecutwfc = 40.000000,
+  ecutrho = 160.000000,
+  occupations = 'smearing',
+  smearing = 'methfessel-paxton',
+  degauss = 0.020000
+/
+&ELECTRONS
+  diagonalization = 'david',
+  mixing_mode = 'plain',
+  conv_thr = 1.0d-8
+/
+ATOMIC_SPECIES
+  Al  26.982  Al.pz-vbc.UPF
+ATOMIC_POSITIONS alat
+  Al  0.00  0.00  0.00
+K_POINTS automatic
+  20 20 20  0 0 0

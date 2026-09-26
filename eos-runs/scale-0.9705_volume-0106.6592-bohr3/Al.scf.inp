@@ -1,0 +1,31 @@
+&CONTROL
+  calculation = 'scf',
+  restart_mode = 'from_scratch',
+  prefix = 'aluminum_eos_scale-0p9705_volume-0106p6592-bohr3',
+  tstress = .true.,
+  tprnfor = .true.,
+  pseudo_dir = '/Users/zhy/Aluminum-from-First-Principles/',
+  outdir = '/Users/zhy/Aluminum-from-First-Principles/eos-runs/scale-0.9705_volume-0106.6592-bohr3/qe-out/'
+/
+&SYSTEM
+  ibrav = 2,
+  celldm(1) = 7.5281121553,
+  nat = 1,
+  ntyp = 1,
+  ecutwfc = 35.0,
+  ecutrho = 280.0,
+  occupations = 'smearing',
+  smearing = 'methfessel-paxton',
+  degauss = 0.01
+/
+&ELECTRONS
+  diagonalization = 'david',
+  mixing_mode = 'plain',
+  conv_thr = 1.0d-8
+/
+ATOMIC_SPECIES
+  Al  26.982  Al.pbe-n-van.UPF
+ATOMIC_POSITIONS alat
+  Al  0.00  0.00  0.00
+K_POINTS automatic
+  16 16 16  0 0 0
