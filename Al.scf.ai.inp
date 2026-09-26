@@ -1,0 +1,35 @@
+&control
+   calculation = 'scf'
+   restart_mode = 'from_scratch'
+   prefix       = 'aluminum'
+   outdir       = '/Users/zhy/Aluminum-from-First-Principles/qe-out/'
+   pseudo_dir   = './'
+   tprnfor      = .true.
+   tstress      = .true.
+/
+
+&system
+   ibrav       = 2
+   celldm(1)   = 7.6532        ! Lattice parameter in Bohr (~4.05 Angstroms)
+   nat         = 1
+   ntyp        = 1
+   ecutwfc     = 30.0          ! Wavefunction kinetic energy cutoff (Ry)
+   ecutrho     = 120.0         ! Charge density kinetic energy cutoff (Ry)
+   occupations = 'smearing'
+   smearing    = 'methfessel-paxton'
+   degauss     = 0.02          ! Smearing width (Ry)
+/
+
+&electrons
+   conv_thr    = 1.0d-8        $ Convergence threshold for self-consistency
+   mixing_beta = 0.7           ! Mixing factor for potential continuation
+/
+
+ATOMIC_SPECIES
+ Al  26.9815  Al.pbe-n-kjpaw_psl.1.0.upf
+
+ATOMIC_POSITIONS crystal
+ Al  0.000000000  0.000000000  0.000000000
+
+K_POINTS automatic
+ 12 12 12  1 1 1

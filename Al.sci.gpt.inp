@@ -1,0 +1,34 @@
+&CONTROL
+    calculation = 'scf',
+    prefix = 'aluminum',
+    outdir = '/Users/zhy/Aluminum-from-First-Principles/qe-out/',
+    pseudo_dir = './pseudo/',
+/
+
+&SYSTEM
+    ibrav = 2,
+    celldm(1) = 7.6534,
+    nat = 1,
+    ntyp = 1,
+
+    ecutwfc = 40.0,
+    ecutrho = 320.0,
+
+    occupations = 'smearing',
+    smearing = 'mv',
+    degauss = 0.02,
+/
+
+&ELECTRONS
+    conv_thr = 1.0d-8,
+    mixing_beta = 0.7,
+/
+
+ATOMIC_SPECIES
+Al  26.9815385  Al.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS crystal
+Al  0.0  0.0  0.0
+
+K_POINTS automatic
+12 12 12  0 0 0

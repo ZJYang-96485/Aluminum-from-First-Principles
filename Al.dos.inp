@@ -1,0 +1,9 @@
+&DOS
+  prefix = 'aluminum_a5_bands',
+  outdir = '/Users/zhy/Aluminum-from-First-Principles/qe-out/a5-bands/',
+  bz_sum = 'tetrahedra',
+  Emin = -5.00,
+  Emax = 35.00,
+  DeltaE = 0.020,
+  fildos = '/Users/zhy/Aluminum-from-First-Principles/qe-results/Al.dos.dat'
+/

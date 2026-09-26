@@ -41,6 +41,16 @@ baseline, not a converged result. In particular, include and converge
 `ecutrho` (an ultrasoft potential commonly needs roughly 8-12 times
 `ecutwfc`) before reporting physical results.
 
+## Fixed-cell convergence driver
+
+`scripts/al_convergence.py` generates a 48-point fixed-cell convergence grid
+using `alat = 9.0 bohr`, eight cutoffs (15-50 Ry), six cubic meshes
+(4x4x4 through 16x16x16), `degauss = 0.05 Ry`, and `ecutrho = 8 * ecutwfc`.
+It never runs QE unless `--run` is explicit. After selecting a cutoff from
+that grid, use its `smearing` mode to make the required 0.05, 0.02, and 0.01
+Ry k-point scans. Generated cases and results live in `convergence-runs/`,
+which is ignored by Git.
+
 ## Installation validation: H2
 
 The walkthrough-compatible H2 test is separate from the Al project:

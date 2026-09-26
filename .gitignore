@@ -11,5 +11,25 @@ qe-results/
 h2-test/qe-out/
 h2-test/H2.scf.out
 
+# Generated cutoff, k-point, and smearing convergence cases and results
+convergence-runs/
+
+# Generated fixed-volume equation-of-state calculations and results
+eos-runs/
+
+# Separate LDA convergence, relaxation, and equation-of-state outputs
+lda-convergence-runs/
+lda-a3-relax/
+lda-eos-runs/
+
+# Generated A5 k-path table; reproducible with scripts/al_bands.py
+a5-bands-kpath.csv
+
+# Python bytecode from the convergence driver
+__pycache__/
+
 # One-off diagnostic file created by QE when invoked without an input file
 input_tmp.in
+
+# QE crash marker produced after an unsuccessful launch
+CRASH
